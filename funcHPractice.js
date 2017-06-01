@@ -33,22 +33,22 @@ let words= ['apple', 'bird', 'banana', 'eccc'] ;
    * "This is an example of piglatin" becomes "hisTay siay naay xampleeay foay iglatinpay".
    */
 
- //let string="This is an example of piglatin";
+ let string="This is an example of piglatin";
   function piglatin(string){
       let wrds =string.split('');
    for(let i=0; i<wrds.length; i++){
-       let letters=wrds[i].split('');
-       let fLetter=letters.shift();
-       console.log(fLetter);
-       letters.push(fLetter);
+       let letters = wrds[i].split('');
+       let wletter = letters.shift();
+      // console.log(wletter);
+     letters.push(wletter);
        letters.push('ay');
-       wrds[i]=letters.join('');
+       wrds[i] = letters.join('');
 
    }
    return wrds.join('');
 
   }
-  console.log(piglatin('good day'));
+  console.log(piglatin(string));
 
   /**
    * 4. Write a longestWord function that accepts a string and returns the longest word from the string.
@@ -81,7 +81,7 @@ let names = ['Johnmark', 'DevidM', 'LuwisL', 'Megan'];
                 no.push(i);
 
             }
-             
+            
         }
         return no;
     }
